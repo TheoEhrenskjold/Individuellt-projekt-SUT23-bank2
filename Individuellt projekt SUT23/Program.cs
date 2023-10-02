@@ -4,14 +4,10 @@
     {
         static void Main(string[] args)
         {
-
-
             Console.BackgroundColor = ConsoleColor.Blue;//Since I have choosen Nordea and their colors is blue and white I thought this had to be added.
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.White;
-
             var i = 1;
-
         start://I set the start here so i can loop back to it if the user writes the wrong credentials.
               //This is the log in menu. The user needs to match both the username and password to access the rest.
             Console.WriteLine("Välkommen till Nordea!");
@@ -74,7 +70,7 @@
             //I declare the diffrent accounts here so thay have a value that can be change later on.
             var KontoLön = 13854.45;
             var KontoSpar = 18301.90;
-            List<string> Kontolist = new List<string>();//I play with the list function to see if i can make my account system easier.
+            //List<int> Kontolist = new List<int>();//I play with the list function to see if i can make my account system easier.
 
             var mainbool = true;
             while (mainbool)//I run my mainmenu inside a whileloop so i can comeback to it after the user has finished tha action.
@@ -95,23 +91,8 @@
                             Console.WriteLine("---------- Konton och saldo ----------");
                             Console.WriteLine($"Lönekonto: {KontoLön} KR");
                             Console.WriteLine($"Sparkonto: {KontoSpar} KR");
-
-                            Console.WriteLine("\nVill du öppna ett nytt konto tryck 'K'");
                             Console.WriteLine("\nVill du tillbaka till huvudmenyn klicka på valfri tangent!");
-                            var kontoinput = Console.ReadLine().ToLower();
-                            if (kontoinput == "k")//Here i play with the add account function to my list. 
-                            {
-                                Console.WriteLine("Vad vill du döpa ditt konto till?");
-                                var kontonamn = Console.ReadLine();
-                                Kontolist.Add(kontonamn);
-                                Console.WriteLine($"Du har lagt till {kontonamn}");
-                            }
-                            else
-                            {
-                                break;
-                            }
                             break;
-
                         case 2:
                             {
                                 Console.Clear();
@@ -122,7 +103,6 @@
                                 try
                                 {
                                     var ÖverföringInput = Convert.ToInt32(Console.ReadLine());
-
                                     if (ÖverföringInput == 1)
                                     {
                                         Console.WriteLine("Hur mycket vill du föra över?");
@@ -169,7 +149,6 @@
                                 }
                                 break;
                             }
-
                         case 3:
                             {
                                 Console.Clear();
@@ -221,13 +200,11 @@
                                 }
                                 break;
                             }
-
                         case 4:
                             Console.WriteLine("Tack för idag, Ha en fin dag.");
                             System.Environment.Exit(0);
                             mainbool = false;
                             break;
-
                     }
                 }
                 catch (Exception e)
@@ -240,7 +217,6 @@
 
         public static void MainMenuJohanna()
         {
-
             //I declare the diffrent accounts here so thay have a value that can be change later on.
             var KontoLön = 13854.45;
             var KontoSpar = 18301.90;
@@ -408,7 +384,6 @@
             }
 
         }
-
         public static void MainMenuAnas()
         {
             //I declare the diffrent accounts here so thay have a value that can be change later on.
@@ -579,7 +554,6 @@
         }
         public static void MainMenuPär()
         {
-
             //I declare the diffrent accounts here so thay have a value that can be change later on.
             var KontoLön = 13854.45;
             var KontoSpar = 18301.90;
